@@ -1,0 +1,93 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  font-family: "Trebuchet MS";
+}
+
+.header {
+  background: linear-gradient(180deg,
+      rgba(9, 151, 255, 1) 0%,
+      rgba(0, 83, 238, 1) 8%,
+      rgba(0, 80, 238, 1) 40%,
+      rgba(0, 102, 255, 1) 88%,
+      rgba(0, 102, 255, 1) 93%,
+      rgba(0, 91, 255, 1) 95%,
+      rgba(0, 61, 215, 1) 96%,
+      rgba(0, 61, 215, 1) 100%);
+  padding: 3px 5px 3px 3px;
+  border-top: 1px solid #0831d9;
+  border-left: 1px solid #0831d9;
+  border-right: 1px solid #001ea0;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 7px;
+  font-size: 13px;
+  text-shadow: 1px 1px #0f1089;
+  height: 40px;
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+  color: white;
+}
+
+.form {
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.container>* {
+  width: 40%;
+}
+
+.btn {
+
+  padding: 10px 20px;
+  font-family: var(--sans-serif);
+  -webkit-font-smoothing: antialiased;
+  font-size: 16px;
+  box-sizing: border-box;
+  border: 1px solid #003c74;
+  background: linear-gradient(180deg,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(236, 235, 229, 1) 86%,
+      rgba(216, 208, 196, 1) 100%);
+  box-shadow: none;
+  border-radius: 3px;
+
+  &:not(:disabled) {
+
+    &:active,
+    &.active {
+      box-shadow: none;
+      background: linear-gradient(180deg,
+          rgba(205, 202, 195, 1) 0%,
+          rgba(227, 227, 219, 1) 8%,
+          rgba(229, 229, 222, 1) 94%,
+          rgba(242, 242, 241, 1) 100%);
+    }
+
+    &:hover {
+      box-shadow: inset -1px 1px #fff0cf, inset 1px 2px #fdd889, inset -2px 2px #fbc761, inset 2px -2px #e5a01a;
+    }
+  }
+
+  &:focus,
+  &.focused {
+    box-shadow: inset -1px 1px #cee7ff, inset 1px 2px #98b8ea, inset -2px 2px #bcd4f6, inset 1px -1px #89ade4,
+      inset 2px -2px #89ade4;
+  }
+
+  &::-moz-focus-inner {
+    border: 0;
+  }
+}

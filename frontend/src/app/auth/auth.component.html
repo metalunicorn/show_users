@@ -1,0 +1,21 @@
+<div class=root>
+  <div class='header'></div>
+  <h1>Login</h1>
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class='form' >
+    <div class=container>
+    <mat-form-field>
+      <mat-label>Email</mat-label>
+      <input  matInput  placeholder="Enter your email address" formControlName='email'> 
+      <mat-hint *ngIf="loginForm.controls['email']errors">Email is required</mat-hint>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Password</mat-label>
+      <input matInput placeholder="Enter your password" type="password" formControlName="password">
+      <mat-hint *ngIf="loginForm.controls['password']errors">Password is required</mat-hint>
+    </mat-form-field>
+    <p>Status: {{loginForm.status}}</p>
+      <button [disabled]="!loginForm.valid" type='submit' class='btn'>Login</button>
+    </div>
+  </form>
+</div>
+
